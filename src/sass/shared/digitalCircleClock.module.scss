@@ -1,0 +1,91 @@
+.time {
+  display: flex;
+  gap: 0 20px;
+  justify-content: center;
+  padding: 20px 0;
+  .time__circle {
+    position: relative;
+    width: 110px;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .time__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Secular One";
+    font-size: 32px;
+    line-height: 32px;
+    color: #4b6584;
+  }
+  .time__indicator {
+    display: block;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    margin-top: 5px;
+    color: #8395a7;
+  }
+  .time__ampm {
+    font-family: "Secular One";
+    font-size: 22px;
+    color: #4b6584;
+  }
+  svg {
+    width: 110%;
+    height: 100%;
+    transform: rotate(271deg);
+  }
+  circle {
+    fill: transparent;
+    stroke-width: 4;
+    stroke: #d1d8e0;
+    transform: translate(5px, 5px);
+  }
+  .time__circle circle:nth-child(2) {
+    stroke-width: 5;
+    stroke-dasharray: 315;
+  }
+  .time__circle:nth-child(1) circle:nth-child(2) {
+    stroke: #ff6b6b;
+  }
+  .time__circle:nth-child(2) circle:nth-child(2) {
+    // stroke: #ff9f1a;
+    stroke: #575fcf;
+  }
+  .time__circle:nth-child(3) circle:nth-child(2) {
+    stroke: #fed330;
+    // stroke: #341f97;
+  }
+  .time__dot {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    &::before {
+      content: "";
+      position: absolute;
+      top: -2px;
+      left: 48px;
+      width: 15px;
+      height: 15px;
+      background-color: red;
+      border-radius: 50%;
+    }
+  }
+  .time__circle:nth-child(1) .time__dot::before {
+    background-color: #ff6b6b;
+    box-shadow: 0 0 20px #ff6b6b, 0 0 60px #ff6b6b;
+  }
+  .time__circle:nth-child(2) .time__dot::before {
+    background-color: #575fcf;
+    box-shadow: 0 0 20px #575fcf, 0 0 60px #575fcf;
+  }
+  .time__circle:nth-child(3) .time__dot::before {
+    background-color: #fed330;
+    box-shadow: 0 0 20px #fed330, 0 0 60px #fed330;
+  }
+}

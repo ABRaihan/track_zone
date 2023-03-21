@@ -1,10 +1,4 @@
-import CssBaseline from "@mui/material/CssBaseline";
-import Inputs from "../pages/Inputs";
+import Home from "../pages/Home";
 export default function App() {
-  return (
-    <>
-      <CssBaseline />
-      <Inputs />
-    </>
-  );
+  return <Home />;
 }

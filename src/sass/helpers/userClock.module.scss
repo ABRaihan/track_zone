@@ -1,0 +1,26 @@
+.userClock {
+  & .wrapper {
+    padding: 20px 0;
+  }
+  & .title {
+    font-size: 28px;
+    text-align: center;
+    font-family: "Secular One";
+  }
+  & .clock__box {
+    display: flex;
+    justify-content: center;
+    gap: 0 20px;
+  }
+  & .actions {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+  }
+  & .actions__title {
+    font-family: "Secular One";
+  }
+  & .actions__btn {
+    margin: auto;
+  }
+}
